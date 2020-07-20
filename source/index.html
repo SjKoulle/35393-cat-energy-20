@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page">
     <header class="page-header">
       <a class="page-header__logo logo">
         <img src="https://via.placeholder.com/150x150" alt="Cat Energy" class="logo__icon logo__icon--header">
@@ -14,9 +14,9 @@
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav-item"><a href="#">Главная</a></li>
-            <li class="main-nav-item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="main-nav-item"><a href="form.html">Подбор программы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -80,12 +80,12 @@
             <li class="slider__item slider__item--active"><img src="https://via.placeholder.com/150x150" alt="Было до использования питания Cat Energy"></li>
             <li class="slider__item"><img src="https://via.placeholder.com/150x150" alt="Стало после использования питания Cat Energy"></li>
           </ul>
+          <p class="example__toggles slider__toggles">
+            <button class="slider__toggle slider__toggle--active" type="button">Было</button>
+            <button class="slider__toggle" type="button">Стало</button>
+          </p>
         </div>
-        <p class="example__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--active" type="button">Было</button>
-          <button class="slider__toggle" type="button">Стало</button>
-        </p>
-      </div>>
+      </div>
     </section>
     <!-- Живой пример END -->
     <!-- Приглашаем к сотрудничеству -->

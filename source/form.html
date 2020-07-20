@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
-<body class="page__body">
+<body class="page">
 <header class="page-header">
   <a class="page-header__logo logo">
     <img src="https://via.placeholder.com/150x150" alt="Cat Energy" class="logo__icon logo__icon--header">
@@ -14,17 +14,15 @@
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li class="main-nav-item"><a href="index.html">Главная</a></li>
-        <li class="main-nav-item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="main-nav-item"><a href="#">Подбор программы</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Подбор программы</a></li>
       </ul>
     </div>
   </nav>
 </header>
 <main class="page-main">
-  <div class="page-main__headline">
-    <h1 class="title-h1">Подбор программы</h1>
-  </div>
+  <h1 class="title-h1">Подбор программы</h1>
   <!-- Форма -->
   <section class="page-main__section form">
     <form action="https://echo.htmlacademy.ru" method="post">
@@ -128,12 +126,10 @@
   </section>
   <!-- Форма END -->
   <!-- Приглашаем к сотрудничеству -->
-  <section class="page-main__section contacts--dark-bg">
-    <div class="contacts__wrapper">
-      <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
-      <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</div>
-    </div>
+  <section class="page-main__section contacts contacts--dark-bg">
+    <h2 class="visually-hidden">Контакты</h2>
+    <div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
+    <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</div>
   </section>
   <!-- Приглашаем к сотрудничеству END -->
   <!-- Карта -->
