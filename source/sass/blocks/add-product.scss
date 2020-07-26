@@ -1,0 +1,31 @@
+.add-product {
+  border-bottom: 1px solid $color-special-grey;
+  padding-top: 13px;
+  padding-bottom: 20px;
+
+  &:first-of-type {
+    border-top: 1px solid $color-special-grey;
+  }
+}
+
+.add-product__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 13px;
+}
+
+.add-product__stats,
+.add-product__price {
+  @include content-text(14px, 14px);
+}
+
+.add-product__price {
+  text-align: right;
+}
+
+.add-product__btn {
+  margin-top: 15px;
+}

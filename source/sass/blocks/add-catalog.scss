@@ -1,0 +1,15 @@
+.add-catalog {
+  padding-bottom: 39px;
+}
+
+.add-catalog__wrapper {
+  @include mobile-wrapper;
+}
+
+.add-catalog__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 35px;
+}

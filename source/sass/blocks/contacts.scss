@@ -1,0 +1,21 @@
+.contacts {
+  &--dark-bg {
+    background-color: $color-basic-grey;
+  }
+}
+
+.contacts__wrapper {
+  @include mobile-wrapper;
+  padding-top: 28px;
+}
+
+.contacts__title {
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  @include content-text(14px, 20px);
+}

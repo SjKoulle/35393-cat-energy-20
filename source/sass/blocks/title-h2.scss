@@ -1,0 +1,13 @@
+.title-h2 {
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-basic;
+  font-weight: 400;
+  margin: 0;
+
+  &--promo {
+    padding-bottom: 25px;
+    color: $color-accent-text;
+    text-align: center;
+  }
+}

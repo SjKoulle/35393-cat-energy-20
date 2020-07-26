@@ -1,0 +1,71 @@
+.example {
+  background-color: #eaeaea;
+}
+
+.example__wrapper {
+  @include mobile-wrapper;
+  padding-top: 27px;
+}
+
+.example__title {
+  padding-bottom: 33px;
+}
+
+.example__anons {
+  @include content-text;
+  padding: 0;
+  padding-bottom: 25px;
+  margin: 0;
+}
+
+.example__stats-list {
+  margin: 0;
+}
+
+.example__stats-item {
+  position: relative;
+}
+
+.example__stats-number {
+  display: block;
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  border: 1px solid $color-special-grey;
+  border-radius: 3px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.example__stats-descr {
+  display: block;
+  width: 124px - 40px;
+  margin: 0;
+  background-color: #eaeaea;
+  text-align: center;
+
+  position: absolute;
+  bottom: -13px;
+  left: 20px;
+
+  @include content-text(12px, 12px);
+}
+
+.example__costs {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 34px;
+  padding-bottom: 42px;
+}
+
+.example__toggles {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 9px;
+}
