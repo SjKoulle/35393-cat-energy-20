@@ -1,15 +1,11 @@
 .form {
-  padding-bottom: 32px;
+  padding-bottom: 8px;
 }
 
 .form__wrapper {
   @include mobile-wrapper;
   padding-top: 20px;
   padding-bottom: 24px;
-
-  &:last-of-type {
-    padding-bottom: 0;
-  }
 }
 
 .form__bordered-wrapper {
