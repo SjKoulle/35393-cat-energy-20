@@ -6,6 +6,10 @@
   @include mobile-wrapper;
   padding-top: 20px;
   padding-bottom: 24px;
+
+  &--no-pt {
+    padding-top: 0;
+  }
 }
 
 .form__bordered-wrapper {
@@ -18,7 +22,7 @@
   line-height: 18px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 39px;
 }
 
 .form__filters-group {
