@@ -1,0 +1,20 @@
+.btn {
+  display: block;
+  width: 100%;
+  font-family: $font-basic;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-accent-text;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: $color-accent;
+  border: none;
+
+  &--light {
+    background-color: $color-basic-grey;
+    font-size: 16px;
+    color: $color-special-dark-grey;
+  }
+}

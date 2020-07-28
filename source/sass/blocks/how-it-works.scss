@@ -1,0 +1,25 @@
+.how-it-works {
+  @include mobile-wrapper;
+  padding-bottom: 42px;
+}
+
+.how-it-works__title {
+  padding-bottom: 38px;
+}
+
+.how-it-works__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include content-text;
+}
+
+.how-it-works__item {
+  padding-left: 60px + 20px;
+  padding-bottom: 24px;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}

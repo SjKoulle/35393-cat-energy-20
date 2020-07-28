@@ -1,0 +1,41 @@
+.catalog-promo {
+  @include mobile-wrapper;
+  padding-bottom: 27px;
+}
+
+.catalog-promo__item {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: $color-basic-grey;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-promo__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-basic;
+  padding-left: 50px + 19px;
+  margin: 0;
+}
+
+.catalog-promo__anons {
+  @include content-text;
+  margin-top: 29px;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.catalog-promo__link {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}

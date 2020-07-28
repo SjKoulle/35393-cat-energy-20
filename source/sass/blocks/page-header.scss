@@ -1,0 +1,10 @@
+.page-header {
+  padding-top: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.page-header__logo {
+  display: block;
+
+  @include mobile-wrapper;
+}

@@ -1,0 +1,19 @@
+.present {
+  @include mobile-wrapper;
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 35px;
+}
+
+.present__descr {
+  @include content-text(16px, 20px);
+  display: block;
+  margin: 0;
+  text-align: center;
+  padding-top: 186px;
+  padding-right: 55px;
+  padding-left: 55px;
+  color: $color-accent-text;
+}
