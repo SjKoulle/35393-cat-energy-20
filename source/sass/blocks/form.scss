@@ -4,17 +4,75 @@
 
 .form__wrapper {
   @include mobile-wrapper;
-  padding-top: 20px;
+  padding-top: 26px;
   padding-bottom: 24px;
 
   &--no-pt {
     padding-top: 0;
+  }
+
+  &--no-pb {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include tablet-wrapper;
+    padding-top: 57px;
+    padding-bottom: 57px;
+
+    &--no-pt {
+      padding-top: 0;
+    }
+
+    &--no-pb {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-wrapper;
+
+    &--2columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &--2columns .form__input-wrapper {
+      width: 568px;
+    }
   }
 }
 
 .form__bordered-wrapper {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.form__bordered-wrapper .form__wrapper {
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.form_desktop-wrapper {
+  @media (min-width: $desktop-width) {
+    @include desktop-wrapper;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    & .form__wrapper {
+      width: 568px;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 .form__anons {
@@ -23,23 +81,95 @@
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 344px;
+    padding-bottom: 66px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 240px;
+  }
 }
 
 .form__filters-group {
+  width: 100%;
+  position: relative;
   border: none;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--square {
+      margin-left: 40px;
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 28px;
+      border: 1px solid #e7e7e7;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--square {
+      margin-top: 126px;
+      margin-left: 0;
+      padding-top: 25px;
+      padding-left: 28px;
+      padding-bottom: 24px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.form__hr {
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 42px;
+    width: 50%;
+    height: 2px;
+    background-color: $color-accent;
+    z-index: -1000;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      width: 100%;
+      top: 80px;
+    }
+  }
 }
 
 .form__input-wrapper {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   padding-bottom: 13px;
 
   &:last-of-type {
     padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -48,15 +178,21 @@
 }
 
 .form__input {
+  flex-grow: 1;
   border: 1px solid #e7e7e7;
   border-radius: 0;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-left: 15px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
 
   &[placeholder] {
     font-family: $font-basic;
     text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -65,51 +201,125 @@
   margin: 0;
   padding: 0;
   padding-left: 30px + 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+
+    &--columns {
+      padding-left: 40px;
+      display: grid;
+      grid-template-columns: 282px 282px;
+      column-gap: 67px;
+      row-gap: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--columns {
+      grid-template-columns: 221px 221px 221px 221px;
+      column-gap: 104px;
+    }
+  }
 }
 
 .form__option {
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 
   &:last-of-type {
     padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-left: 40px + 19px;
+    padding-bottom: 10px;
+    margin-bottom: 13px;
+
+    &:last-of-type {
+      padding-bottom: 10px;
+      margin-bottom: 0;
+    }
   }
 }
 
 .form__legend {
   width: 100%;
-  float: left;
 }
 
 .form__legend-text {
-  display: block;
-  padding-top: 27px;
+  display: inline-block;
+  max-width: 190px;
+  //padding-top: 27px;
+  padding-right: 22px;
   padding-bottom: 34px;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  background-color: $color-bg-basic;
 
   &--no-pt {
     padding-top: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 76px;
+    padding-right: 42px;
+    padding-left: 40px;
+  }
 }
 
 .form__field-message {
+  width: 250px;
   height: 150px;
+  font-size: 16px;
+  line-height: 18px;
   border: 1px solid #e7e7e7;
   border-radius: 0;
   padding-top: 13px;
-  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 13px;
+  padding-left: 15px;
   resize: none;
 
   &[placeholder] {
     font-family: $font-basic;
     text-transform: uppercase;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+    width: 638px;
+    height: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    width: 1190px;
+  }
 }
 
 .form__submit {
-  padding-top: 34px;
+  padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 22px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 282px 288px;
+    column-gap: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 17px;
+    margin-left: 0;
+    grid-template-columns: 568px 1fr;
+    column-gap: 81px;
+    align-items: baseline;
+  }
 }
 
 .form__send {
@@ -124,4 +334,12 @@
 
   text-align: center;
   padding-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }

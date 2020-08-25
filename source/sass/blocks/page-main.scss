@@ -1,5 +1,17 @@
+.page-main {
+  position: relative;
+}
+
 .page-main__h-wrapper {
   @include mobile-wrapper;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-wrapper;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-wrapper;
+  }
 }
 
 .page-main__section {

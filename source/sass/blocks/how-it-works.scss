@@ -1,10 +1,24 @@
 .how-it-works {
   @include mobile-wrapper;
   padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-wrapper;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-wrapper;
+    padding-bottom: 0;
+  }
 }
 
 .how-it-works__title {
   padding-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 32px;
+  }
 }
 
 .how-it-works__list {
@@ -13,13 +27,102 @@
   margin: 0;
 
   @include content-text;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 77px;
+  }
 }
 
 .how-it-works__item {
   padding-left: 60px + 20px;
   padding-bottom: 24px;
+  position: relative;
 
   &:last-of-type {
     padding-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--nutrition::before {
+    background-image: url("/img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("/img/advantage-powder@1x.png");
+  }
+
+  &--dining::before {
+    background-image: url("/img/advantage-dining@1x.png");
+  }
+
+  &--clock::before {
+    background-image: url("/img/advantage-clock@1x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 280px - 151px;
+    padding: 0;
+    padding-top: 151px;
+    padding-right: 80px;
+    margin-bottom: 37px;
+
+    &::before {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "1";
+      position: absolute;
+      top: 0;
+      right: 107px;
+      font-family: $font-basic;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      z-index: -500;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 5px;
+
+    &::after {
+      right: 10px;
+    }
   }
 }
