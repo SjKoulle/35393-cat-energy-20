@@ -32,7 +32,7 @@
     <section class="page-main__section form">
       <h2 class="visually-hidden">Анкета по подбору питания Cat Energy</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="form_desktop-wrapper">
+        <div class="form__container">
           <div class="form__wrapper form__wrapper--no-pt">
             <p class="form__anons">Заполните анкету, и мы подберем программу питания для вашего кота</p>
             <fieldset class="form__filters-group">
@@ -79,8 +79,8 @@
           </div>
         </div>
         <fieldset class="form__filters-group form__hr">
+          <legend class="form__legend"><span class="form__legend-text">Контактные данные (владельца кота)</span></legend>
           <div class="form__wrapper form__wrapper--2columns form__wrapper--no-pb">
-            <legend class="form__legend"><span class="form__legend-text">Контактные данные (владельца кота)</span></legend>
             <label class="form__input-wrapper" for="email">
               <span class="form__label">E-mail:*</span>
               <input class="form__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -92,14 +92,14 @@
           </div>
         </fieldset>
         <fieldset class="form__filters-group form__hr">
+          <label class="form__legend" for="comment"><span class="form__legend-text">Комментарий</span></label>
           <div class="form__wrapper form__wrapper--no-pb">
-            <label class="form__legend" for="comment"><span class="form__legend-text">Комментарий</span></label>
             <textarea class="form__field-message" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="form__filters-group form__hr">
+          <legend class="form__legend"><span class="form__legend-text">Дополнительно</span></legend>
           <div class="form__wrapper form__wrapper--no-pb">
-            <legend class="form__legend"><span class="form__legend-text">Дополнительно</span></legend>
             <ul class="form__list form__list--columns">
               <li class="form__option checkbox">
                 <input class="visually-hidden" type="checkbox" name="shugar-free" id="shugar-free" checked>
@@ -144,7 +144,7 @@
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
-        <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</div>
+        <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br><span class="contacts__town">Санкт-Петербург</span></div>
       </div>
     </section>
     <!-- Приглашаем к сотрудничеству END -->
