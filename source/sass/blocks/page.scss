@@ -1,10 +1,11 @@
 .page {
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0;
+  position: relative;
 
   font-family: $font-basic;
   color: $color-basic;
   font-style: normal;
 
-  background-color: $color-bg-basic;
+  //background-color: $color-bg-basic;
 }

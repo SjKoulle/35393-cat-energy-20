@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="page">
   <header class="page-header">
-    <a class="page-header__logo logo" href="index.html">
-      <img src="img/logo-mobile.svg" alt="Cat Energy" class="logo__icon logo__icon--header">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#">Подбор программы</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo logo">
+        <img src="img/logo-mobile.svg" alt="Cat Energy" class="logo__icon logo__icon--header">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <div class="page-main__h-wrapper">
@@ -29,53 +32,55 @@
     <section class="page-main__section form">
       <h2 class="visually-hidden">Анкета по подбору питания Cat Energy</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="form__wrapper form__wrapper--no-pt">
-          <p class="form__anons">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <fieldset class="form__filters-group">
-            <label class="form__input-wrapper" for="name">
-              <span class="form__label">Имя:*</span>
-              <input class="form__input" type="text" id="name" name="name" placeholder="Барсик" required>
-            </label>
-            <label class="form__input-wrapper" for="weight">
-              <span class="form__label">Вес (кг):*</span>
-              <input class="form__input" type="text" id="weight" name="weight" placeholder="7" required>
-            </label>
-            <label class="form__input-wrapper" for="age">
-              <span class="form__label">Возраст (лет):</span>
-              <input class="form__input" type="text" id="age" name="age" placeholder="7">
-            </label>
-          </fieldset>
-        </div>
-        <div class="form__bordered-wrapper">
-          <div class="form__wrapper">
+        <div class="form__container">
+          <div class="form__wrapper form__wrapper--no-pt">
+            <p class="form__anons">Заполните анкету, и мы подберем программу питания для вашего кота</p>
             <fieldset class="form__filters-group">
-              <legend class="visually-hidden">Цель</legend>
-              <ul class="form__list">
-                <li class="form__option radio">
-                  <input class="visually-hidden" type="radio" name="purpose" value="lose-weight" id="lose-weight" checked>
-                  <label class="form__radio" for="lose-weight">
-                    Похудение
-                  </label>
-                </li>
-                <li class="form__option radio">
-                  <input class="visually-hidden" type="radio" name="purpose" value="gain-weight" id="gain-weight">
-                  <label class="form__radio" for="gain-weight">
-                    Набор массы
-                  </label>
-                </li>
-                <li class="form__option radio">
-                  <input class="visually-hidden" type="radio" name="purpose" value="idk" id="idk">
-                  <label class="form__radio" for="idk">
-                    Не знаю (нужен ваш совет)
-                  </label>
-                </li>
-              </ul>
+              <label class="form__input-wrapper" for="name">
+                <span class="form__label">Имя:*</span>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="form__input-wrapper" for="weight">
+                <span class="form__label">Вес (кг):*</span>
+                <input class="form__input" type="text" id="weight" name="weight" placeholder="7" required>
+              </label>
+              <label class="form__input-wrapper" for="age">
+                <span class="form__label">Возраст (лет):</span>
+                <input class="form__input" type="text" id="age" name="age" placeholder="7">
+              </label>
             </fieldset>
           </div>
+          <div class="form__bordered-wrapper">
+            <div class="form__wrapper">
+              <fieldset class="form__filters-group form__filters-group--square">
+                <legend class="visually-hidden">Цель</legend>
+                <ul class="form__list">
+                  <li class="form__option radio">
+                    <input class="visually-hidden" type="radio" name="purpose" value="lose-weight" id="lose-weight" checked>
+                    <label class="form__radio" for="lose-weight">
+                      Похудение
+                    </label>
+                  </li>
+                  <li class="form__option radio">
+                    <input class="visually-hidden" type="radio" name="purpose" value="gain-weight" id="gain-weight">
+                    <label class="form__radio" for="gain-weight">
+                      Набор массы
+                    </label>
+                  </li>
+                  <li class="form__option radio">
+                    <input class="visually-hidden" type="radio" name="purpose" value="idk" id="idk">
+                    <label class="form__radio" for="idk">
+                      Не знаю (нужен ваш совет)
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
         </div>
-        <div class="form__wrapper">
-          <fieldset class="form__filters-group">
-            <legend class="form__legend"><span class="form__legend-text form__legend-text--no-pt">Контактные данные (владельца кота)</span></legend>
+        <fieldset class="form__filters-group form__hr">
+          <legend class="form__legend"><span class="form__legend-text">Контактные данные (владельца кота)</span></legend>
+          <div class="form__wrapper form__wrapper--2columns form__wrapper--no-pb">
             <label class="form__input-wrapper" for="email">
               <span class="form__label">E-mail:*</span>
               <input class="form__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -84,14 +89,18 @@
               <span class="form__label">Телефон:*</span>
               <input class="form__input" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </label>
-          </fieldset>
-          <fieldset class="form__filters-group">
-            <label class="form__legend" for="comment"><span class="form__legend-text">Комментарий</span></label>
-            <textarea class="form__field-message" name="comment" id="comment" cols="45" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
-          <fieldset class="form__filters-group">
-            <legend class="form__legend"><span class="form__legend-text">Дополнительно</span></legend>
-            <ul class="form__list">
+          </div>
+        </fieldset>
+        <fieldset class="form__filters-group form__hr">
+          <label class="form__legend" for="comment"><span class="form__legend-text">Комментарий</span></label>
+          <div class="form__wrapper form__wrapper--no-pb">
+            <textarea class="form__field-message" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__filters-group form__hr">
+          <legend class="form__legend"><span class="form__legend-text">Дополнительно</span></legend>
+          <div class="form__wrapper form__wrapper--no-pb">
+            <ul class="form__list form__list--columns">
               <li class="form__option checkbox">
                 <input class="visually-hidden" type="checkbox" name="shugar-free" id="shugar-free" checked>
                 <label class="form__checkbox" for="shugar-free">
@@ -117,7 +126,9 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </div>
+        </fieldset>
+        <div class="form__wrapper">
           <div class="form__submit">
             <button class="form__send btn" type="submit">Отправить заявку</button>
             <small class="form__info-required">
@@ -133,7 +144,7 @@
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
-        <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</div>
+        <div class="contacts__address">ул. Большая Конюшенная, д. 19/8<br><span class="contacts__town">Санкт-Петербург</span></div>
       </div>
     </section>
     <!-- Приглашаем к сотрудничеству END -->

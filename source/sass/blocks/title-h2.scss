@@ -10,4 +10,15 @@
     color: $color-accent-text;
     text-align: center;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $color-basic;
+    text-align: left;
+
+    &--promo {
+      padding-bottom: 41px;
+    }
+  }
 }
