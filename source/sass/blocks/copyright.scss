@@ -1,4 +1,23 @@
 .copyright {
   @include content-text(16px, 16px);
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &:hover svg {
+    fill: $color-accent;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -8px;
+
+    & span {
+      padding-right: 14px;
+    }
+  }
 }

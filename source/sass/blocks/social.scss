@@ -5,5 +5,54 @@
   min-height: 22px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.social__item {
+  margin-right: 30px;
+
+  &:hover svg {
+    fill: $color-accent;
+  }
+
+  &:active svg {
+    fill: $color-accent;
+    opacity: 0.3;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 30px;
+
+    &--vk svg {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--inst svg {
+      width: 23px;
+      height: 23px;
+    }
+    &--fb svg {
+      width: 13px;
+      height: 27px;
+      margin-top: -3px;
+    }
+
+  }
 }

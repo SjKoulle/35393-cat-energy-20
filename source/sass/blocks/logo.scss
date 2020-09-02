@@ -1,8 +1,14 @@
-.logo__icon--header {
-  width: 190px;
-  padding-bottom: 15px;
-}
+.logo__icon {
+  &--header {
+    width: 190px;
+  }
 
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+    padding-bottom: 10px;
+  }
+}
 .logo__text--footer {
   width: 128px;
 }

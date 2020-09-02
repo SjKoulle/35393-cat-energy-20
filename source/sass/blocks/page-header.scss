@@ -13,6 +13,8 @@
 }
 
 .page-header__wrapper {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     @include tablet-wrapper;
     padding-bottom: 0;
@@ -35,6 +37,14 @@
   display: block;
 
   @include mobile-wrapper;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     width: 174px;
