@@ -256,7 +256,7 @@
   }
 
   &:active,
-  &:focus  {
+  &:focus {
     border-color: #444444;
   }
 
@@ -264,13 +264,12 @@
     border-color: #ff8282;
   }
 
-  &:active+svg,
-  &:focus+svg {
+  &:active + svg,
+  &:focus + svg {
     fill: $color-accent;
   }
 
-  &:invalid+svg,
-  &:invalid+svg {
+  &:invalid + svg {
     fill: #ff8282;
   }
 
@@ -283,6 +282,7 @@
     }
   }
 }
+
 .form__list {
   list-style: none;
   margin: 0;
@@ -399,7 +399,7 @@
   }
 
   &:active,
-  &:focus  {
+  &:focus {
     border-color: #444444;
   }
 
@@ -511,7 +511,7 @@
   }
 }
 
-input[type=radio]:checked+.form__radio::after {
+input[type="radio"]:checked + .form__radio::after {
   background-color: $color-accent;
 }
 
@@ -520,7 +520,7 @@ input[type=radio]:checked+.form__radio::after {
 
   &:focus,
   &:active {
-    color: rgba(0, 0, 0, 0.3)
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &::before {
@@ -569,6 +569,6 @@ input[type=radio]:checked+.form__radio::after {
   }
 }
 
-input[type=checkbox]:checked+.form__checkbox::after {
+input[type="checkbox"]:checked + .form__checkbox::after {
   display: block;
 }
