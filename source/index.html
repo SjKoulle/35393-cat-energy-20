@@ -11,7 +11,8 @@
       <div class="page-header__wrapper">
         <a class="page-header__logo logo">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet2.svg">
             <img src="img/logo-mobile.svg" alt="Cat Energy" class="logo__icon logo__icon--header">
           </picture>
         </a>
@@ -93,12 +94,14 @@
             <ul class="slider__list">
               <li class="slider__item slider__item--active">
                 <picture>
+                  <source media="(min-width: 1280px)" srcset="img/before-desktop@1x.png">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
                   <img src="img/before-mobile@1x.png" alt="Было до использования питания Cat Energy">
                 </picture>
               </li>
               <li class="slider__item">
                 <picture>
+                  <source media="(min-width: 1280px)" srcset="img/after-desktop@1x.png">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
                   <img src="img/after-mobile@1x.png" alt="Стало после использования питания Cat Energy">
                 </picture>
@@ -106,7 +109,7 @@
             </ul>
             <div class="example__toggles slider__toggles">
               <button class="slider__toggle slider__toggle--prev slider__toggle--active" type="button">Было</button>
-              <div class="slider__tracker"></div>
+              <div class="slider__tracker slider__tracker--prev"></div>
               <button class="slider__toggle slider__toggle--next" type="button">Стало</button>
             </div>
           </div>

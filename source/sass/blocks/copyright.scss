@@ -5,19 +5,21 @@
   flex-wrap: nowrap;
   align-items: center;
 
-  &:hover svg {
-    fill: $color-accent;
-  }
-
   &:active {
     opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
     margin-top: -8px;
+  }
+}
 
-    & span {
-      padding-right: 14px;
-    }
+.copyright:hover svg {
+  fill: $color-accent;
+}
+
+.copyright span {
+  @media (min-width: $tablet-width) {
+    padding-right: 14px;
   }
 }

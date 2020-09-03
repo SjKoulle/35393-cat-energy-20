@@ -49,15 +49,16 @@
     min-height: 206px;
     left: 0;
     top: -75px;
-
-
-    & img {
-      vertical-align: bottom;
-    }
   }
 
   @media (min-width: $desktop-width) {
     top: -80px;
+  }
+}
+
+.product__img-wrapper img {
+  @media (min-width: $tablet-width) {
+    vertical-align: bottom;
   }
 }
 

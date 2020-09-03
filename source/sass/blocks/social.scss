@@ -11,15 +11,6 @@
 .social__item {
   margin-right: 30px;
 
-  &:hover svg {
-    fill: $color-accent;
-  }
-
-  &:active svg {
-    fill: $color-accent;
-    opacity: 0.3;
-  }
-
   &:last-of-type {
     margin-right: 0;
   }
@@ -27,6 +18,15 @@
   @media (min-width: $tablet-width) {
     margin-right: 20px;
   }
+}
+
+.social__item:hover svg {
+  fill: $color-accent;
+}
+
+.social__item:active svg {
+  fill: $color-accent;
+  opacity: 0.3;
 }
 
 .social__link {
@@ -38,21 +38,27 @@
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 30px;
+  }
+}
 
-    &--vk svg {
-      width: 30px;
-      height: 22px;
-    }
+.social__link--vk svg {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
 
-    &--inst svg {
-      width: 23px;
-      height: 23px;
-    }
+.social__link--inst svg {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
 
-    &--fb svg {
-      width: 13px;
-      height: 27px;
-      margin-top: -3px;
-    }
+.social__link--fb svg {
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 27px;
+    margin-top: -3px;
   }
 }

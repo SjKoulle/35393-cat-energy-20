@@ -10,28 +10,6 @@
     box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
   }
 
-  &--opened .main-nav__toggle {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 8px;
-      width: 24px;
-      height: 2px;
-      background-color: #000000;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-  }
-
   &--opened .main-nav__toggle:hover::before,
   &--opened .main-nav__toggle:hover::after {
     background-color: rgba(0, 0, 0, 0.6);
@@ -58,6 +36,28 @@
       display: block;
       position: static;
     }
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  .main-nav::before,
+  .main-nav::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  .main-nav::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .main-nav::after {
+    transform: rotate(-45deg);
   }
 }
 
