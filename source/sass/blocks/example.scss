@@ -5,36 +5,32 @@
   @media (min-width: $tablet-width) {
     background-color: transparent;
     border-top: 1px solid #e6e6e6;
-    padding-bottom: 64px;
+    padding-bottom: 69px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 462px;
+      position: absolute;
+      bottom: 0;
+      z-index: -100;
+      background-color: #eaeaea;
+    }
   }
 
   @media (min-width: $desktop-width) {
     border-top: none;
     padding-bottom: 0;
-  }
-}
 
-.example__bg {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    width: 100%;
-    height: 462px;
-    position: absolute;
-    bottom: 0;
-    z-index: -100;
-    background-color: #eaeaea;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 200px;
+    &::before {
+      top: 207px;
+    }
   }
 }
 
 .example__wrapper {
   @include mobile-wrapper;
-  padding-top: 27px;
+  padding-top: 30px;
 
   @media (min-width: $tablet-width) {
     @include tablet-wrapper;
@@ -49,7 +45,7 @@
 
     display: grid;
     grid-template-columns: 436px 636px;
-    grid-template-rows: 275px 165px 132px 90px;
+    grid-template-rows: 277px 165px 110px 115px;
     column-gap: 134px;
     grid-template-areas:
       "title slider"
@@ -102,11 +98,12 @@
     width: 50%;
     flex-grow: 1;
     justify-content: flex-start;
-    margin-bottom: 59px;
+    margin-bottom: 84px;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: stats-list;
+    margin-bottom: 39px;
   }
 }
 
@@ -114,7 +111,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    margin-right: 42px;
+    margin-right: 39px;
   }
 }
 
@@ -178,6 +175,7 @@
 
   @media (min-width: $desktop-width) {
     background-color: #eaeaea;
+    bottom: -7px;
   }
 }
 
@@ -187,20 +185,21 @@
   text-transform: uppercase;
   text-align: center;
   padding-top: 34px;
-  padding-bottom: 42px;
+  padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     width: 180px;
     font-size: 20px;
+    line-height: 29px;
     text-align: right;
-    padding-top: 20px;
+    padding-top: 8px;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: costs;
     width: 100%;
-    padding-top: 0;
+    padding-top: 17px;
     text-align: left;
   }
 }
@@ -208,11 +207,18 @@
 .example__costs-sum {
   @media (min-width: $desktop-width) {
     display: inline-block;
-    padding-left: 63px;
+    padding-left: 59px;
   }
 }
 
 .example__slider {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
   @media (min-width: $desktop-width) {
     grid-area: slider;
   }
@@ -220,14 +226,14 @@
 
 .example__toggles {
   margin: 0;
-  padding-top: 27px;
-  padding-bottom: 9px;
+  padding-top: 25px;
+  padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 20px;
+    padding-top: 38px;
   }
 }

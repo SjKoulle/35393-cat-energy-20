@@ -1,16 +1,40 @@
 .present {
   @include mobile-wrapper;
+  position: relative;
 
+  &::before {
+    content: "";
+    width: 56px;
+    height: 80px;
+    position: absolute;
+    top: 103px;
+    left: 50%;
+    margin-left: -27px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-gift.svg");
+  }
 
   @media (min-width: $tablet-width) {
     @include tablet-wrapper;
+
+    &::before {
+      top: 133px;
+      left: 120px;
+      margin-left: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
     padding: 0;
     margin: 0;
-    margin-top: 104px;
+    align-self: end;
+
+    &::before {
+      top: 66px;
+      left: 50%;
+      margin-left: -26px;
+    }
   }
 }
 
@@ -63,7 +87,7 @@
 
   @media (min-width: $desktop-width) {
     min-height: 107px;
-    padding-top: 106px;
+    padding-top: 140px;
     padding-right: 38px;
     padding-left: 37px;
     padding-bottom: 42px;

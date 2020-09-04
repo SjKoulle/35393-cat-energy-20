@@ -6,8 +6,8 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     left: 50%;
-    bottom: 112px;
-    margin-left: -613px;
+    bottom: 80px;
+    margin-left: -611px;
 
     &--dark-bg {
       background-color: transparent;
@@ -17,27 +17,29 @@
 
 .contacts__wrapper {
   @include mobile-wrapper;
-  padding-top: 28px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     @include tablet-wrapper;
-    padding-top: 66px;
-    padding-bottom: 51px - 22px;
-    display: flex;
-    justify-content: space-between;
+    padding-top: 69px;
+    padding-bottom: 53px - 22px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 414px;
-    padding-left: 76px;
+    width: 570px - 35px - 80px;
+    padding-left: 35px;
     padding-right: 80px;
-    padding-top: 66px;
-    padding-bottom: 50px;
+    padding-top: 68px;
+    padding-bottom: 54px;
     background-color: $color-bg-basic;
   }
 }
 
 .contacts__title {
+  width: 50%;
+  padding-right: 7px;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 4px;
@@ -46,11 +48,18 @@
   @media (min-width: $tablet-width) {
     width: 175px;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 23px;
+    padding-left: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
 .contacts__address {
+  width: 50%;
+
   @include content-text(14px, 20px);
 
   @media (min-width: $tablet-width) {
@@ -58,10 +67,12 @@
     text-align: right;
     font-size: 16px;
     line-height: 20px;
+    padding-right: 42px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    padding-right: 0;
   }
 }
 
