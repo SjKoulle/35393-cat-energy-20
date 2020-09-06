@@ -15,6 +15,14 @@
     background-color: #5eaa2f;
   }
 
+  @media (min-resolution: $twox-dpi),
+    (min-resolution: $twox-dppx) {
+    &::before {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
     padding-top: 32px;
@@ -36,6 +44,14 @@
       background-color: #5eaa2f;
       left: 50%;
       top: -126px;
+    }
+
+    @media (min-resolution: $twox-dpi),
+    (min-resolution: $twox-dppx) {
+      &::before {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }

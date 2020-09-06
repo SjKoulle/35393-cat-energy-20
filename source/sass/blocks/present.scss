@@ -45,14 +45,32 @@
   background-position: top center;
   background-repeat: no-repeat;
 
+  @media (min-resolution: $twox-dpi),
+  (min-resolution: $twox-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: $twox-dpi),
+    (min-resolution: $twox-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 289px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: $twox-dpi),
+    (min-resolution: $twox-dppx) {
+      background-image: url("../img/gift-photo-desktop@1x.jpg");
+      background-size: 245px auto;
+    }
   }
 }
 
