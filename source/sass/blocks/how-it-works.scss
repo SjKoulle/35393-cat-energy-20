@@ -81,7 +81,7 @@
   }
 
   @media (min-resolution: $twox-dpi),
-  (min-resolution: $twox-dppx) {
+    (min-resolution: $twox-dppx) {
     &--nutrition::before {
       background-image: url("../img/advantage-leaf@2x.png");
       background-size: 60px 60px;
