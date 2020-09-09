@@ -5,6 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=922bb7bb-060d-4e79-8405-a855c0a92549&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="page">
     <header class="page-header">
@@ -137,8 +138,8 @@
       <!-- Приглашаем к сотрудничеству END -->
       <!-- Карта -->
       <div class="map">
-        <div class="map__ya" id="map"></div>
-        <div class="map__wrapper">
+        <div class="map__ya map__ya--nojs" id="map"></div>
+        <div class="map__wrapper map__wrapper--nojs">
           <picture>
             <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-map-desktop2@1x.webp 1x, img/bg-map-desktop2@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet2@1x.webp 1x, img/bg-map-tablet2@2x.webp 2x">
@@ -199,7 +200,6 @@
       </div>
     </footer>
     <script src="js/map.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=922bb7bb-060d-4e79-8405-a855c0a92549&lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
