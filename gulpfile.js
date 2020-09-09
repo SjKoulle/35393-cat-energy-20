@@ -66,34 +66,6 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
-// Server
-
-const server = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'build'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server;
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
-
 // Build
 
 const copy = () => {
@@ -128,12 +100,40 @@ const clean = () => {
 exports.clean = clean;
 
 const build = () => gulp.series(
-  "clean",
-  "copy",
-  "images",
-  "styles",
-  "sprite",
-  "html"
+  clean,
+  copy,
+  images,
+  styles,
+  sprite,
+  html
 );
 
-exports.build = build;
+exports.build = build();
+
+// Server
+
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+exports.server = server;
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/*.html").on("change", sync.reload);
+}
+
+exports.default = gulp.series(
+  build(), server, watcher
+);
