@@ -58,6 +58,7 @@
 
 .product__img-wrapper img {
   @media (min-width: $tablet-width) {
+    width: 100%;
     vertical-align: bottom;
   }
 }
