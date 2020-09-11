@@ -6,6 +6,8 @@ ymaps.ready(function () {
     }),
 
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: "Cat Energy в Санкт-Петербурге"
+    }, {
       // Опции.
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
