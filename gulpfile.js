@@ -25,14 +25,28 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// Styles Opt
+
+const stylesOpt = () => {
+  return pipeline(
+    gulp.src('build/css/style.css'),
+    csso(),
+    rename({
+      suffix: ".min",
+      extname: ".css"
+    }),
+    gulp.dest('build/css')
+  );
+}
+
+exports.stylesOpt = stylesOpt;
 
 // Optimise Images
 
@@ -86,6 +100,10 @@ const jsOpt = () => {
   return pipeline(
     gulp.src('source/js/*.js'),
     uglify(),
+    rename({
+      suffix: ".min",
+      extname: ".js"
+    }),
     gulp.dest('build/js')
   );
 }
@@ -98,6 +116,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
+    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -129,6 +148,7 @@ const build = () => gulp.series(
   copy,
   images,
   styles,
+  stylesOpt,
   sprite,
   htmlOpt,
   jsOpt
