@@ -365,6 +365,7 @@
 
 .form__legend {
   display: block;
+  padding-top: 10px;
 
   @include mobile-wrapper;
 
@@ -380,7 +381,7 @@
 .form__legend-text {
   display: inline-block;
   max-width: 190px;
-  padding-top: 26px;
+  padding-top: 16px;
   padding-right: 11px;
   padding-bottom: 6px;
   font-size: 24px;
@@ -396,7 +397,7 @@
     max-width: 100%;
     font-size: 36px;
     line-height: 36px;
-    padding-top: 62px;
+    padding-top: 52px;
     padding-bottom: 19px;
     padding-right: 42px;
     padding-left: 40px;
@@ -404,7 +405,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: -40px;
-    padding-top: 69px;
+    padding-top: 59px;
   }
 }
 
