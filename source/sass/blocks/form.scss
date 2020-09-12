@@ -220,24 +220,24 @@
   position: absolute;
 
   &--mail {
-    top: 14px;
-    right: 12px;
+    top: 16px;
+    right: 15px;
   }
 
   &--phone {
-    top: 14px;
-    right: 12px;
+    top: 13px;
+    right: 13px;
   }
 
   @media (min-width: $tablet-width) {
     &--mail {
-      top: 14px;
-      right: 15px;
+      top: 16px;
+      right: 17px;
     }
 
     &--phone {
       top: 14px;
-      right: 15px;
+      right: 17px;
     }
   }
 
@@ -508,7 +508,6 @@
 .form__radio {
   position: relative;
 
-  &:focus,
   &:active {
     opacity: 0.3;
   }
@@ -525,7 +524,7 @@
     box-shadow: 0 0 0 1px $color-special-grey;
   }
 
-  &:hover::after {
+  &:focus::after{
     box-shadow: 0 0 0 1px #bababa;
   }
 
@@ -548,13 +547,12 @@ input[type="radio"]:checked + .form__radio::after {
 }
 
 input[type="radio"]:focus + .form__radio::after {
-  opacity: 0.3;
+  box-shadow: 0 0 0 1px #bababa;
 }
 
 .form__checkbox {
   position: relative;
 
-  &:focus,
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -609,5 +607,5 @@ input[type="checkbox"]:checked + .form__checkbox::after {
 }
 
 input[type="checkbox"]:focus + .form__checkbox::before {
-  border-color: rgba(205, 205, 205, 0.3);
+  border-color: #bababa;
 }
