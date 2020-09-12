@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const pipeline = require('readable-stream').pipeline;
 
 // Styles
 
@@ -22,14 +25,28 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// Styles Opt
+
+const stylesOpt = () => {
+  return pipeline(
+    gulp.src('build/css/style.css'),
+    csso(),
+    rename({
+      suffix: ".min",
+      extname: ".css"
+    }),
+    gulp.dest('build/css')
+  );
+}
+
+exports.stylesOpt = stylesOpt;
 
 // Optimise Images
 
@@ -65,6 +82,33 @@ const sprite = () => {
 }
 
 exports.sprite = sprite;
+
+// Html min
+
+const htmlOpt  = () => {
+    return gulp.src("source/*.html")
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest("build"));
+  }
+
+
+exports.htmlOpt = htmlOpt;
+
+//Js min
+
+const jsOpt = () => {
+  return pipeline(
+    gulp.src('source/js/*.js'),
+    uglify(),
+    rename({
+      suffix: ".min",
+      extname: ".js"
+    }),
+    gulp.dest('build/js')
+  );
+}
+
+exports.jsOpt = jsOpt;
 
 // Build
 
@@ -104,8 +148,10 @@ const build = () => gulp.series(
   copy,
   images,
   styles,
+  stylesOpt,
   sprite,
-  html
+  htmlOpt,
+  jsOpt
 );
 
 exports.build = build();
@@ -130,7 +176,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/*.html", gulp.series("htmlOpt"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
